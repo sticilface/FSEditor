@@ -1,0 +1,10 @@
+{
+   "name": "FSEditor",
+   "keywords": "FS independent Editor for ESP8266 and ESP32",
+   "description": "",
+   "homepage": "",
+   "author": "sticilface",
+   "version": "1.0.0",
+   "frameworks": "arduino",
+   "platforms": "esp8266"
+ }
