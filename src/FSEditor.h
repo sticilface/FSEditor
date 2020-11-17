@@ -1,8 +1,12 @@
 #pragma once
 #include <ESPAsyncWebServer.h>
 #include <FS.h>
+#include <list>
+#include <utility>
 
-
+namespace FSE {
+  using FSListType = std::list<std::pair<const String, const size_t>>;
+}; 
 
 template<typename implT>
 class FSEditor: public AsyncWebHandler {
@@ -14,6 +18,7 @@ class FSEditor: public AsyncWebHandler {
     bool _authenticated;
     uint32_t _startTime;
   public:
+    
 
     FSEditor(const String& hostUrl, typename implT::FSType & fs, const String& username=String(), const String& password=String() );   
     virtual bool canHandle(AsyncWebServerRequest *request) override final;
